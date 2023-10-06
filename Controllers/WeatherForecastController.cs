@@ -32,7 +32,10 @@ namespace wepAPI.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [Route("GET/WeatherForecast")]
+        [Route("GET/WeatherForecast2")]
+        [Route("[action]")]
+        public IEnumerable<WeatherForecast> GetW()
         {
             return ListWeatherForecast;
         }
