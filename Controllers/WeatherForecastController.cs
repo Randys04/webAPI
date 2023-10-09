@@ -37,6 +37,7 @@ namespace wepAPI.Controllers
         [Route("[action]")]
         public IEnumerable<WeatherForecast> GetW()
         {
+            _logger.LogInformation("Retornando lista de WeatherForecast");
             return ListWeatherForecast;
         }
 
