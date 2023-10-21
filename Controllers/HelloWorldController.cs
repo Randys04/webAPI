@@ -11,12 +11,13 @@ namespace wepAPI.Controllers
         IHelloWorldService helloWorldService;
         private readonly ILogger<HelloWorldController> _logger;
 
-        public HelloWorldController(IHelloWorldService phelloWorldService, ILogger<HelloWorldController> logger) 
+        public HelloWorldController(IHelloWorldService phelloWorldService, ILogger<HelloWorldController> logger)
         {
             _logger = logger;
             helloWorldService = phelloWorldService;
         }
 
+        [HttpGet]
         public IActionResult getHelloWorld()
         {
             _logger.LogInformation("Retornando un Hello World");
