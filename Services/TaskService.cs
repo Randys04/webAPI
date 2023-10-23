@@ -39,7 +39,7 @@ namespace wepAPI.Services
             }
         }
 
-        public async System.Threading.Tasks.Task Delete(Guid id, Task task) 
+        public async System.Threading.Tasks.Task Delete(Guid id) 
         {
             var deletedTask = context.Tasks.Find(id);
 
@@ -56,6 +56,6 @@ namespace wepAPI.Services
         IEnumerable<Task> Get();
         System.Threading.Tasks.Task Save(Task task);
         System.Threading.Tasks.Task Update(Guid id, Task task);
-        System.Threading.Tasks.Task Delete(Guid id, Task task);
+        System.Threading.Tasks.Task Delete(Guid id);
     }
 }
