@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using tasks_Project.Models;
-using Task = tasks_Project.Models.Task;
+using wepAPI.Models;
+using Task = wepAPI.Models.Task;
 
-namespace tasks_Project
+namespace wepAPI
 {
     public class TasksContext: DbContext
     {

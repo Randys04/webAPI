@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace tasks_Project.Models
+namespace wepAPI.Models
 {
     public class Category
     {

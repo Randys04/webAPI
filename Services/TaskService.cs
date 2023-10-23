@@ -1,6 +1,6 @@
-﻿using tasks_Project;
-using tasks_Project.Models;
-using Task = tasks_Project.Models.Task;
+﻿using wepAPI;
+using wepAPI.Models;
+using Task = wepAPI.Models.Task;
 
 namespace wepAPI.Services
 {

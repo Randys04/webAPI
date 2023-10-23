@@ -1,6 +1,6 @@
 ﻿
-using tasks_Project;
-using tasks_Project.Models;
+using wepAPI;
+using wepAPI.Models;
 
 namespace wepAPI.Services
 {
