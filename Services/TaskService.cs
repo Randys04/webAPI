@@ -4,7 +4,7 @@ using Task = wepAPI.Models.Task;
 
 namespace wepAPI.Services
 {
-    public class TaskService
+    public class TaskService : ITaskService
     {
         TasksContext context;
 

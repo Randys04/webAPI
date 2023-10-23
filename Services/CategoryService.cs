@@ -4,7 +4,7 @@ using wepAPI.Models;
 
 namespace wepAPI.Services
 {
-    public class CategoryService
+    public class CategoryService : ICategoryService
     {
         TasksContext context;
 
