@@ -20,6 +20,7 @@ namespace wepAPI.Services
 
         public async System.Threading.Tasks.Task Save(Task task)
         {
+            task.CreationDate = DateTime.Now;
             context.Add(task);
             await context.SaveChangesAsync();
         }
@@ -33,7 +34,7 @@ namespace wepAPI.Services
                 updatedTask.Title = task.Title;
                 updatedTask.Description = task.Description;
                 updatedTask.TaskPriority = task.TaskPriority;
-                updatedTask.Summary = task.Summary;
+                updatedTask.CategoryId = task.CategoryId;
 
                 await context.SaveChangesAsync();
             }

@@ -20,6 +20,7 @@ namespace wepAPI.Services
 
         public async System.Threading.Tasks.Task Save(Category category) 
         {
+            
             context.Add(category);
             await context.SaveChangesAsync();
         }
@@ -46,6 +47,7 @@ namespace wepAPI.Services
             {
                 context.Remove(deletedCategory);
 
+                
                 await context.SaveChangesAsync();
             }
         }

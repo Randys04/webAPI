@@ -7,7 +7,6 @@ using wepAPI.Services;
 namespace wepAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
     public class CategoryController : ControllerBase
     {
         ICategoryService categoryService;
@@ -23,17 +22,12 @@ namespace wepAPI.Controllers
             return Ok(categoryService.Get());
         }
 
-        // GET api/<CategoryController>/5
-        //[HttpGet("{id}")]
-        //public IActionResult Get(int id)
-        //{
-        //    return "value";
-        //}
 
         // POST api/<CategoryController>
         [HttpPost]
         public IActionResult Post([FromBody] Category category)
         {
+            
             categoryService.Save(category);
             return Ok();
         }

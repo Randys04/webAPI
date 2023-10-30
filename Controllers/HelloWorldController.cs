@@ -4,17 +4,20 @@ using wepAPI.Services;
 
 namespace wepAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class HelloWorldController : ControllerBase
     {
         IHelloWorldService helloWorldService;
         private readonly ILogger<HelloWorldController> _logger;
 
-        public HelloWorldController(IHelloWorldService phelloWorldService, ILogger<HelloWorldController> logger)
+        TasksContext tasksContext;
+
+        public HelloWorldController(IHelloWorldService phelloWorldService, ILogger<HelloWorldController> logger, TasksContext _tasksContext)
         {
             _logger = logger;
             helloWorldService = phelloWorldService;
+            tasksContext = _tasksContext;
         }
 
         [HttpGet]
@@ -22,6 +25,14 @@ namespace wepAPI.Controllers
         {
             _logger.LogInformation("Retornando un Hello World");
             return Ok(helloWorldService.GetHelloWorld());
+        }
+
+        [HttpGet]
+        [Route("createDB")]
+        public IActionResult createDataBase()
+        {
+            tasksContext.Database.EnsureCreated();
+            return Ok();
         }
     }
 }

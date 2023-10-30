@@ -9,7 +9,6 @@ using Task = wepAPI.Models.Task;
 namespace wepAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
     public class TaskController : ControllerBase
     {
         ITaskService taskService;
@@ -24,13 +23,6 @@ namespace wepAPI.Controllers
         public IActionResult Get()
         {
             return Ok(taskService.Get()); 
-        }
-
-        // GET api/<TaskController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
         }
 
         // POST api/<TaskController>
